@@ -2,4 +2,11 @@
 <resources>
     <string name="play">Jouer</string>
     <string name="score">score</string>
+    <string name="Valid">Valider</string>
+    <string name="operation">Operation</string>
+    <string name="correct">Correct</string>
+    <string name="False">Incorrect</string>
+    <string name="Input">Saisie</string>
+    <string name="Last_score">Dernier resultat</string>
+    <string name="Score">Score</string>
 </resources>
