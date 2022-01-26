@@ -9,4 +9,6 @@
     <string name="Input">Input</string>
     <string name="Last_score">Last_score</string>
     <string name="Score">Score</string>
+    <string name="play_menu_label">Play_menu_label</string>
+    <string name="score_menu_label">Score_menu_label</string>
 </resources>

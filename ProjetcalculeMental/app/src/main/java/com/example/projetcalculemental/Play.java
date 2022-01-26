@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 
 public class Play extends AppCompatActivity {
 
@@ -15,7 +16,8 @@ public class Play extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.submit_menu, menu);
         return super.onPrepareOptionsMenu(menu);
     }
 }
