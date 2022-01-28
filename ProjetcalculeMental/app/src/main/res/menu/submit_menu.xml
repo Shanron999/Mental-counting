@@ -2,7 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/play_menu_label"
+    <item
+        android:id="@+id/score_menu_button"
+        android:title="@string/score_menu_label"
             app:showAsAction="always"/>
-    <item android:title="@string/score_menu_label" />
 </menu>

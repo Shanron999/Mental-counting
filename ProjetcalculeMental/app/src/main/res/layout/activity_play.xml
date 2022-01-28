@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/correct"
@@ -30,7 +31,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/correct"
-                android:textColor="#5FE81A" />
+                android:textColor="@color/green"
+                android:visibility="gone"
+                tools:ignore="NestedWeights" />
 
             <TextView
                 android:id="@+id/False"
@@ -38,7 +41,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/False"
-                android:textColor="#FF0808" />
+                android:textColor="@color/Red"
+                android:visibility="gone" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +53,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/Input" />
+                android:hint="@string/Input"
+                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button

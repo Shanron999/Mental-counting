@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetcalculeMental</string>
+    <string name="app_name" translatable="false">ProjetcalculeMental</string>
     <string name="play">play</string>
     <string name="score">score</string>
     <string name="Valid">Valid</string>
@@ -9,6 +9,7 @@
     <string name="Input">Input</string>
     <string name="Last_score">Last_score</string>
     <string name="Score">Score</string>
-    <string name="play_menu_label">Play_menu_label</string>
     <string name="score_menu_label">Score_menu_label</string>
+    <string name="cleanscore_menu_label">cleanscore_menu_label</string>
+    <string name="previous">Previous</string>
 </resources>

@@ -9,6 +9,7 @@
     <string name="Input">Saisie</string>
     <string name="Last_score">Dernier resultat</string>
     <string name="Score">Score</string>
-    <string name="play_menu_label">Play_menu_label</string>
-    <string name="score_menu_label">Score_menu_label</string>
+    <string name="cleanscore_menu_label">Supprimer le score</string>
+    <string name="score_menu_label">Score</string>
+    <string name="previous">Précedent</string>
 </resources>
