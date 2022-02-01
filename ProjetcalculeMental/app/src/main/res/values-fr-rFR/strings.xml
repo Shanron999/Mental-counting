@@ -12,4 +12,7 @@
     <string name="cleanscore_menu_label">Supprimer le score</string>
     <string name="score_menu_label">Score</string>
     <string name="previous">Précedent</string>
+    <string name="Time">chrono</string>
+    <string name="start">Commencer</string>
+    <string name="Time_Out">Temps écoulé</string>
 </resources>

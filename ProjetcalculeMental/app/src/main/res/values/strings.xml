@@ -12,4 +12,7 @@
     <string name="score_menu_label">Score_menu_label</string>
     <string name="cleanscore_menu_label">cleanscore_menu_label</string>
     <string name="previous">Previous</string>
+    <string name="Time">Timer</string>
+    <string name="start">START</string>
+    <string name="Time_Out">Time Out</string>
 </resources>
