@@ -15,4 +15,7 @@
     <string name="Time">Timer</string>
     <string name="start">START</string>
     <string name="Time_Out">Time Out</string>
+    <string name="easy">Easy</string>
+    <string name="Standare">Standard</string>
+    <string name="Hard">Hard</string>
 </resources>

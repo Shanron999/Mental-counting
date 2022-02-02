@@ -17,18 +17,24 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class Play extends AppCompatActivity {
-    private static long START_TIME_IN_MILIS= TimeUnit.SECONDS.toMillis(10); //1minute 6000
+    private static long START_TIME_IN_MILIS;
     private TextView Timer;
     private Button Timerbutton;
     private Button Valid;
     private CountDownTimer countDownTimer;
     private TextView False;
-    private  long timeleftmiliesecond=START_TIME_IN_MILIS;
+    private  long timeleftmiliesecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+        Intent Valeur = getIntent();
+        if (Valeur.hasExtra("Valeur"))
+        {
+            START_TIME_IN_MILIS=Valeur.getLongExtra("Valeur",START_TIME_IN_MILIS);
+        }
+        timeleftmiliesecond=START_TIME_IN_MILIS;
 
         Timer = findViewById(R.id.Timer);
         Timerbutton = findViewById(R.id.Timerbutton);
@@ -126,6 +132,11 @@ public class Play extends AppCompatActivity {
         if(id==R.id.score_menu_button){
             Intent intent = new Intent(this,ScoreActivity.class);
             startActivity(intent);
+            countDownTimer.cancel();
+            reset();
+            Timerbutton.setVisibility(View.VISIBLE);
+            Valid.setVisibility(View.GONE);
+
         }
 
         return super.onOptionsItemSelected(item);

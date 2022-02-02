@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        associateOpenActivityTobutton(R.id.buttonplay,Play.class);
+        associateOpenActivityTobutton(R.id.buttonplay,Dificultes.class);
         associateOpenActivityTobutton(R.id.buttonscore,ScoreActivity.class);
     }
     private void associateOpenActivityTobutton(int id,Class activity)
