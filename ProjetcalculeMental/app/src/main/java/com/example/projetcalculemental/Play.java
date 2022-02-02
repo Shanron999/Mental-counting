@@ -29,18 +29,11 @@ public class Play extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-        Intent Valeur = getIntent();
-        if (Valeur.hasExtra("Valeur"))
-        {
-            START_TIME_IN_MILIS=Valeur.getLongExtra("Valeur",START_TIME_IN_MILIS);
-        }
-        timeleftmiliesecond=START_TIME_IN_MILIS;
-
+        settimer();
         Timer = findViewById(R.id.Timer);
         Timerbutton = findViewById(R.id.Timerbutton);
         Valid=findViewById(R.id.valid);
         False=findViewById(R.id.False);
-
         Timerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +51,15 @@ public class Play extends AppCompatActivity {
         });
         updateTimer();
     }
-
+//--------------------------Debut timer---------------------------------//
+    private  void  settimer(){
+        Intent Valeur = getIntent();
+        if (Valeur.hasExtra("Valeur"))
+        {
+            START_TIME_IN_MILIS=Valeur.getLongExtra("Valeur",START_TIME_IN_MILIS);
+        }
+        timeleftmiliesecond=START_TIME_IN_MILIS;
+    }
     private void startimer(){
         countDownTimer = new CountDownTimer(timeleftmiliesecond,1) {
             @Override
@@ -101,12 +102,6 @@ public class Play extends AppCompatActivity {
         if(miliesecond<100)timelefttext +="0";
         if(miliesecond<10)timelefttext +="0";
         timelefttext += miliesecond;
-
-        /*String timelefttext = String.format(Locale.ENGLISH,"%02d : %02d"
-                ,TimeUnit.MILLISECONDS.toMinutes(1)
-                ,TimeUnit.MILLISECONDS.toSeconds(1)
-                , TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(1)));*/
-
         Timer.setText(timelefttext);
 
 
@@ -117,8 +112,9 @@ public class Play extends AppCompatActivity {
         timeleftmiliesecond=START_TIME_IN_MILIS;
         updateTimer();
     }
+    //--------------------------Fin timer---------------------------------//
 
-
+    //--------------------------Debut Menu---------------------------------//
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -141,4 +137,5 @@ public class Play extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    //--------------------------Fin Menu---------------------------------//
 }
