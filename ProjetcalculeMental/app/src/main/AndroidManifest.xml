@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetcalculeMental">
         <activity
-            android:name=".Dificultes"
+            android:name=".Activity.DifficultesActivity"
             android:exported="false" />
         <activity
-            android:name=".ScoreActivity"
+            android:name=".Activity.ScoreActivity"
             android:exported="false" />
         <activity
-            android:name=".Play"
+            android:name=".Activity.PlayActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

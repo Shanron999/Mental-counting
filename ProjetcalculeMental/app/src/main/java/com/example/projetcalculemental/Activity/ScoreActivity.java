@@ -1,4 +1,4 @@
-package com.example.projetcalculemental;
+package com.example.projetcalculemental.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import com.example.projetcalculemental.R;
 
 public class ScoreActivity extends AppCompatActivity {
 

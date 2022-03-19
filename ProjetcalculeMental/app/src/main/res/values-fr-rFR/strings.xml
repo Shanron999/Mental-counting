@@ -18,4 +18,5 @@
     <string name="easy">Facile</string>
     <string name="Standare">Moyens</string>
     <string name="Hard">Difficile</string>
+    <string name="counter">Nombre</string>
 </resources>

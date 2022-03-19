@@ -1,4 +1,4 @@
-package com.example.projetcalculemental;
+package com.example.projetcalculemental.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,12 +11,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.projetcalculemental.R;
+
 import java.util.concurrent.TimeUnit;
 
-public class Dificultes extends AppCompatActivity {
-    private  long uneminute=TimeUnit.MINUTES.toMillis(1);
-    private long trentesecond=TimeUnit.SECONDS.toMillis(30);
-    private  long dixseconde=TimeUnit.SECONDS.toMillis(10);
+public class DifficultesActivity extends AppCompatActivity {
+
+    public static final String TIMER="TIMER";
+    public static final String MIN ="MIN";
+    public static final String MAX="MAX";
+
+
+
+    private static final long FACILE =TimeUnit.MINUTES.toMillis(2);
+    private static final long MOYENS =TimeUnit.MINUTES.toMillis(1)+TimeUnit.SECONDS.toMillis(30);
+    private static final long DIFFICILE =TimeUnit.MINUTES.toMillis(1);
+
 
 
     @Override
@@ -26,25 +36,31 @@ public class Dificultes extends AppCompatActivity {
         Button Facile = findViewById(R.id.Facile);
         Button Moyen = findViewById(R.id.Moyen);
         Button Difficile = findViewById(R.id.Difficile);
-        Intent Valeur = new Intent (this , Play.class);
+        Intent Valeur = new Intent (this , PlayActivity.class);
         Facile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Valeur.putExtra("Valeur",uneminute);
+                Valeur.putExtra(TIMER, FACILE);
+                Valeur.putExtra(MIN,1);
+                Valeur.putExtra(MAX,10);
                 startActivity(Valeur);
             }
         });
         Moyen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Valeur.putExtra("Valeur",trentesecond);
+                Valeur.putExtra(TIMER, MOYENS);
+                Valeur.putExtra(MIN,1);
+                Valeur.putExtra(MAX,60);
                 startActivity(Valeur);
             }
         });
         Difficile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Valeur.putExtra("Valeur",dixseconde);
+                Valeur.putExtra(TIMER, DIFFICILE);
+                Valeur.putExtra(MIN,1);
+                Valeur.putExtra(MAX,50);
                 startActivity(Valeur);
             }
         });

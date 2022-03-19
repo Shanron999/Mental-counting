@@ -4,22 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Play">
+    tools:context=".Activity.PlayActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/Timer"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="557dp"
+            android:layout_height="552dp"
             android:layout_weight="1"
-            android:autoSizeTextType="uniform"
-            android:gravity="center"
-            android:scaleY="1"
-            android:text="@string/Time" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:scaleY="1"
+                android:text="@string/counter" />
+
+            <TextView
+                android:id="@+id/Timer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:scaleY="1"
+                android:text="@string/Time" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/operation"
@@ -45,20 +62,24 @@
                 android:layout_weight="1"
                 android:autoSizeTextType="uniform"
                 android:text="@string/correct"
+                android:textAllCaps="true"
                 android:textColor="@color/green"
                 android:visibility="gone"
-                tools:ignore="NestedWeights" />
+                tools:ignore="NestedWeights"
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/False"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:autoSizeTextType="none"
+                android:autoSizeTextType="uniform"
                 android:text="@string/False"
                 android:textAllCaps="true"
                 android:textColor="@color/Red"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="NestedWeights"
+                android:gravity="center"/>
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -66,11 +87,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:id="@+id/Input"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/Input"
-                android:inputType="number" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:freezesText="true"
+                android:gravity="center"
+                android:inputType="textShortMessage|numberSigned|textPersonName"
+                android:text="@string/Input" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
